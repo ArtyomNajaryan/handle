@@ -27,9 +27,9 @@ export let Footer = () => {
     <section className="border-t-2 border-gray-100 bg-gray-50" >
 
       <div className=" max-w-7xl mx-auto py-6 md:py-10 lg:py-12   px-4 sm:px-6 lg:px-8">
-        <div className=" grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
+        <a href="#" className=" grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
           {render()}
-        </div>
+        </a>
       </div>
     </section>
 

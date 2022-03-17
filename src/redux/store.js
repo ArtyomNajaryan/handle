@@ -32,10 +32,10 @@ const initialState = {
   ],
 
   order: [
-    { path: 'https://freepikpsd.com/file/2019/10/handle-png.png', name: "Hanggggggggggtdel", price: "10", Quantity: "1", total: '8', },
-    { path: 'https://freepikpsd.com/file/2019/10/handle-png.png', name: "Handel", price: "10", Quantity: "1", total: '8' },
-    { path: 'https://freepikpsd.com/file/2019/10/handle-png.png', name: "Handel", price: "10", Quantity: "1", total: '8' },
-    { path: 'https://freepikpsd.com/file/2019/10/handle-png.png', name: "Handel", price: "10", Quantity: "1", total: '8' },
+    { id: 1, path: 'https://freepikpsd.com/file/2019/10/handle-png.png', name: "Hanggggggggggtdel", price: "10", Quantity: "1", total: '8', },
+    { id: 2, path: 'https://freepikpsd.com/file/2019/10/handle-png.png', name: "Handel", price: "10", Quantity: "1", total: '8' },
+    { id: 3, path: 'https://freepikpsd.com/file/2019/10/handle-png.png', name: "Handel", price: "10", Quantity: "1", total: '8' },
+    { id: 4, path: 'https://freepikpsd.com/file/2019/10/handle-png.png', name: "Handel", price: "10", Quantity: "1", total: '8' },
 
   ],
 
