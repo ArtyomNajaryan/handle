@@ -7,19 +7,32 @@ import { HeaderBackground } from "./HeaderBackground"
 export let Cart = () => {
 
   let [Quantity, setQuantity] = useState(1)
-  let [Del, setDel] = useState("barev")
   /* ---- */
   const { order } = useSelector((state) => {
     return {
       order: state.order
     }
   }
-  )
+)
+  let [Del, setDel] = useState(order)
+
+
+ let [orders, setNewrder] = useState(order);
+
+const removeItem = (id) => {
+  setNewrder(orders.filter((orders) => orders.id !== id));
+
+  console.log(orders);
+};
+
+
+
+
 
   const render = () => {
-    return order.map((orderPrice) => {
+    return orders.map((orderPrice) => {
       return (
-        <tr key={orderPrice.id} id='delete `{orderPrice.id}`' className="border  border-gray-300">
+        <tr key={orderPrice.id} className="border  border-gray-300">
           <td className=" border-b  border-r border-gray-300 w-1/6 text-center"><div className="flex justify-center"><img className="text-center h-10  md:h-24 lg:h-24" src={orderPrice.path} alt="Image" /></div></td>
           <td className=" border-b  border-r border-gray-300 w-1/6"><a href="product-details.html">{orderPrice.name}</a></td>
           <td className="  border-r border-gray-300 w-1/12"><span className="amount">${orderPrice.price}</span></td>
@@ -39,7 +52,9 @@ export let Cart = () => {
             </div>
           </td>
           <td className=" border-b  border-r border-gray-300 w-1/12"><span>$</span>{orderPrice.total * Quantity}</td>
-          <td className="border-b w-1/12 border-r border-gray-300 " onClick={() => { setDel(document.getElementById("delete").innerHTML = '') }}><a className="text-2xl text-red-600" href="#/">×</a></td>
+          <td className="border-b w-1/12 border-r border-gray-300 ">
+          <button  onClick={() => { removeItem(orderPrice.id) }} className="text-2xl text-red-600" href="#/">{orderPrice.id} ×</button>
+          </td>
         </tr>)
     })
 
@@ -78,4 +93,3 @@ export let Cart = () => {
 
   </div>
 }
-
